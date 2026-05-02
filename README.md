@@ -1,49 +1,50 @@
 # 🚀 Cybersecurity Learning System with Analytical Reports on Student Performance
 
-[![Licencia](https://img.shields.io/badge/Licencia-GNU%20General%20Public%20License%20v3.0-blue.svg)](LICENSE)
-[![Versión](https://img.shields.io/badge/Versión-1.0.0-green.svg)]()
+[![License](https://img.shields.io/badge/Licencia-GNU%20General%20Public%20License%20v3.0-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/Versión-1.0.0-green.svg)]()
 
-> Desarrollado con Python (FastAPI), PostgreSQL y Power BI, este sistema brinda formación fundamental en ciberseguridad. Combina metodologías teóricas y prácticas, permitiendo a los estudiantes demostrar eficazmente las habilidades técnicas adquiridas. Además, [Insert text sobre cómo funciona la analítica de rendimiento de los estudiantes].
+> Developed with Python (FastAPI), PostgreSQL, and Power BI, this system provides fundamental cybersecurity training. It combines theoretical and practical methodologies, allowing students to effectively demonstrate their acquired technical skills. Additionally, [Insert text about how student performance analytics works].
 
----
-
-## 📑 Tabla de Contenidos
-
-* [✨ Características](#-características)
-* [🛠️ Requisitos Previos](#-requisitos-previos)
-* [💻 Instalación](#-instalación)
-* [🚀 Uso](#-uso)
-* [🤝 Contribución](#-contribución)
-* [📄 Licencia](#-licencia)
-* [✉️ Contacto](#-contacto)
 
 ---
 
-## ✨ Características
+## 📑 Table of Contents
 
-* **[Insert text - Ej. Registro y autenticación]:** [Insert text - Ej. El sistema permite registrar estudiantes y profesores, garantizando el acceso seguro a los módulos de aprendizaje.]
-* **[Insert text - Ej. Módulos teóricos y prácticos]:** [Insert text - Ej. Los usuarios pueden acceder a material de estudio sobre ciberseguridad y realizar laboratorios o pruebas prácticas.]
-* **[Insert text - Ej. Análisis de rendimiento (Power BI)]:** [Insert text - Ej. Generación de reportes analíticos para visualizar el progreso del estudiante, áreas de mejora y puntuaciones en evaluaciones.]
+* [✨ Features](#-features)
+* [🛠️ Prerequisites](#-prerequisites)
+* [💻 Installation](#-installation)
+* [🚀 Usage](#-usage)
+* [🤝 Contribution](#-contribution)
+* [📄 License](#-license)
+* [✉️ Contact](#-contact)
+
+---
+
+## ✨ Features
+
+* **[Insert text - e.g., Registration and Authentication]:** [Insert text - e.g., The system allows students and teachers to register, guaranteeing secure access to learning modules.]
+* **[Insert text - e.g., Theoretical and Practical Modules]:** [Insert text - e.g., Users can access cybersecurity study materials and conduct labs or tests.] practices.]
+* **[Insert text - e.g., Performance Analysis (Power BI)]:** [Insert text - e.g., Generating analytical reports to visualize student progress, areas for improvement, and assessment scores.]
 * **[Insert text]:** [Insert text]
 * **[Insert text]:** [Insert text]
 
 ---
 
-## 🛠️ Requisitos Previos
+## 🛠️ Prerequisites
 
-Antes de comenzar, asegúrate de tener instalado lo siguiente:
+Before starting, make sure you have the following installed:
 
-* **Python 3.10+** (o la versión específica que uses, ej. 3.14+)
+* **Python 3.10+** (or the specific version you use, e.g., 3.14+)
 * **PostgreSQL**
-* **Power BI Desktop** (para visualización y configuración de reportes)
-* **Visual Studio Code** (u otro editor de tu preferencia)
+* **Power BI Desktop** (for viewing and configuring reports)
+* **Visual Studio Code** (or another editor of your choice)
 * **Git**
 
 ---
 
-## 💻 Instalación
+## 💻 Installation
 
-Sigue estos pasos para configurar el entorno de desarrollo localmente:
+Follow these steps to set up the development environment locally:
 
 ### 1. Clonar el repositorio
 Elige el método de tu preferencia:
