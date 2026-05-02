@@ -1,0 +1,12 @@
+fastapi[standard]
+sqlalchemy
+asyncpg
+alembic
+pyjwt
+pydantic-settings
+passlib[bcrypt]
+email-validator
+phonenumbers
+fastapi-mail
+websockets
+uvicorn[standard]
