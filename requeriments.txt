@@ -1,6 +1,6 @@
 fastapi[standard]
 sqlalchemy
-asyncpg
+psycopg2-binary
 alembic
 pyjwt
 pydantic-settings
@@ -10,3 +10,6 @@ phonenumbers
 fastapi-mail
 websockets
 uvicorn[standard]
+redis
+pytest
+contextlib
