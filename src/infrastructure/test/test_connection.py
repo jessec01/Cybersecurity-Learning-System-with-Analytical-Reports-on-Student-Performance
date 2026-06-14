@@ -1,4 +1,8 @@
 import asyncio
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
 from sqlalchemy import text
 from infrastructure.db.postgres.setting import settings as postgres_settings
 from infrastructure.db.redis.setting import settings as redis_settings
