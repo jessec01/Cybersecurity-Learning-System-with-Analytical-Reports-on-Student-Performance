@@ -109,6 +109,39 @@ tables={
       "sync_strategy": "full_refresh",
       "notes": "Relacion mucho a muchas entre personas y roles"
     },
+  #tabla que almacena los permisos del sistema (resource + action)
+    "permissions": {
+      "primary_key": "id_permission",
+      "columns": {
+        "id_permission": { "type": "INT", "nullable": False },
+        "codename":      { "type": "VARCHAR(100)", "nullable": False, "unique": True },
+        "resource":      { "type": "VARCHAR(70)", "nullable": False, "index": True },
+        "action":        { "type": "VARCHAR(50)", "nullable": False },
+        "description":   { "type": "TEXT", "nullable": False },
+        "is_active":     { "type": "BOOLEAN", "default": True, "nullable": False },
+        "created_at":    { "type": "TIMESTAMP", "nullable": False, "default": TODAY },
+        "updated_at":    { "type": "TIMESTAMP", "nullable": True }
+      },
+      "sync_strategy": "full_refresh",
+      "notes": "Tabla maestra de permisos. resource = dominio, action = verbo permitido"
+    },
+  #tabla que asigna permisos a roles (muchos a muchos)
+    "rol_permissions": {
+      "primary_key": ["id_rol", "id_permission"],
+      "columns": {
+        "id_rol":         { "type": "INT", "nullable": False, "fk": "roles.id_roles" },
+        "id_permission":  { "type": "INT", "nullable": False, "fk": "permissions.id_permission" },
+        "is_active":      { "type": "BOOLEAN", "default": True, "nullable": False },
+        "created_at":     { "type": "TIMESTAMP", "nullable": False, "default": TODAY },
+        "updated_at":     { "type": "TIMESTAMP", "nullable": True }
+      },
+      "foreign_keys": {
+        "id_rol":         { "references": "roles.id_roles", "on_delete": "CASCADE" },
+        "id_permission":  { "references": "permissions.id_permission", "on_delete": "CASCADE" }
+      },
+      "sync_strategy": "full_refresh",
+      "notes": "Relacion muchos a muchos entre roles y permisos"
+    },
   #tabla que almacena los super admin
     "super_admins": {
       "primary_key": ["id_super_admin"],
