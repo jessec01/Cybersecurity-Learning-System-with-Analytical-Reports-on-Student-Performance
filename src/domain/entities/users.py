@@ -35,4 +35,4 @@ class Users(BaseModel):
     def username(self)->str:
         """retorna el nombre de usuario"""
         return self.username
-    
+    #"""logica de usuario definido aqui segun la demanda del sistema"""
