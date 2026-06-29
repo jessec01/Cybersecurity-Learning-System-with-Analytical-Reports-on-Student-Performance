@@ -1,0 +1,22 @@
+name: Contract CI
+
+on:
+  pull_request:
+    paths:
+      - src/infrastructure/contracts/**
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requeriments.txt
+
+      - name: Run contract security tests
+        run: python -m infrastructure.test.test_contract_security
+        working-directory: src

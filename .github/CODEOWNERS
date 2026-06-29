@@ -1,0 +1,2 @@
+# Data Contract - solo el dueño del contrato puede aprobar cambios
+src/infrastructure/contracts/contracts.py   @USUARIO

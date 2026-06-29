@@ -1,6 +1,10 @@
 from fastapi import APIRouter
+from presentation.endpoints.auth import router as auth_router
+
 router = APIRouter()
-# Creamos nuestra primera ruta (el endpoint de inicio)
+router.include_router(auth_router)
+
+
 @router.get("/")
 def read_root():
-    return {"mensaje": "¡Hola Mundo! El servidor de FastAPI está vivo y funcionando 🚀"}
+    return {"mensaje": "Hola Mundo! El servidor de FastAPI esta vivo y funcionando"}
