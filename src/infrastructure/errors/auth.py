@@ -6,11 +6,11 @@ from fastapi.responses import JSONResponse
 from domain.errors.auth_errors import UnauthorizedError, ForbiddenError
 
 
-async def _unauthorized_handler(request: Request, exc: UnauthorizedError):
+def _unauthorized_handler(request: Request, exc: UnauthorizedError):
     return JSONResponse(status_code=401, content={"detail": str(exc) or "No autorizado"})
 
 
-async def _forbidden_handler(request: Request, exc: ForbiddenError):
+def _forbidden_handler(request: Request, exc: ForbiddenError):
     return JSONResponse(status_code=403, content={"detail": str(exc) or "Permiso denegado"})
 
 
