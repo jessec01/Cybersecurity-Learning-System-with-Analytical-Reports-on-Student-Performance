@@ -84,7 +84,9 @@ tables={
         "mail":            { "type": VARCHARLARGE, "nullable": False,"unique": True },
         "phone":           { "type": "VARCHAR(20)", "nullable": True,"unique": True },
         "date_of_birth":   { "type": "DATE", "nullable": True },
-        "id_users":         { "type": "INT", "nullable": False, "fk": "users.id_user" }
+        "id_users":         { "type": "INT", "nullable": False, "fk": "users.id_user" },
+        "created_at":       { "type": "TIMESTAMP", "nullable": False, "default": TODAY },
+        "updated_at":       { "type": "TIMESTAMP", "nullable": True }
       },
       "foreign_keys": {
         "id_users": {"references": "users.id_user", "on_delete": "CASCADE"}
