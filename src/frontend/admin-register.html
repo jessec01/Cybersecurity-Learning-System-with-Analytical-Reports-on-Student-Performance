@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Administrador - Cybersecurity Learning</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div id="admin-register-form-container"></div>
+    </div>
+
+    <script type="module">
+        import { ApiClient } from '/static/infrastructure/api/ApiClient.js';
+        import { AdminRegistrationForm } from '/static/presentation/components/AdminRegistrationForm.js';
+
+        const apiClient = new ApiClient('');
+
+        const adminForm = new AdminRegistrationForm(apiClient);
+        const container = document.getElementById('admin-register-form-container');
+        adminForm.render(container);
+
+        adminForm.onSubmit = (result) => {
+            alert('Administrador registrado exitosamente');
+            window.location.href = '/';
+        };
+
+        adminForm.onError = (error) => {
+            console.error('Error de registro:', error);
+        };
+    </script>
+</body>
+</html>

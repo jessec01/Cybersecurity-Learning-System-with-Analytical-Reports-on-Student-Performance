@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Cybersecurity Learning</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div id="login-form-container"></div>
+    </div>
+
+    <script type="module">
+        import { ApiClient } from '/static/infrastructure/api/ApiClient.js';
+        import { TokenStorage } from '/static/infrastructure/storage/TokenStorage.js';
+        import { LoginForm } from '/static/presentation/components/LoginForm.js';
+
+        const apiClient = new ApiClient('');
+        const tokenStorage = new TokenStorage();
+
+        if (tokenStorage.isAuthenticated()) {
+            window.location.href = 'dashboard.html';
+        }
+
+        const loginForm = new LoginForm(apiClient, tokenStorage);
+        const container = document.getElementById('login-form-container');
+        loginForm.render(container);
+
+        loginForm.onSubmit = (result) => {
+            alert('Inicio de sesión exitoso');
+            window.location.href = '/dashboard';
+        };
+
+        loginForm.onError = (error) => {
+            console.error('Error de login:', error);
+        };
+    </script>
+</body>
+</html>
